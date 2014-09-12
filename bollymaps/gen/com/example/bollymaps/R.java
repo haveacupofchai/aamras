@@ -1450,7 +1450,7 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f02006c;
         public static final int common_signin_btn_text_pressed_dark=0x7f02006d;
         public static final int common_signin_btn_text_pressed_light=0x7f02006e;
-        public static final int ic_launcher=0x7f02006f;
+        public static final int globe=0x7f02006f;
         public static final int ic_plusone_medium_off_client=0x7f020070;
         public static final int ic_plusone_small_off_client=0x7f020071;
         public static final int ic_plusone_standard_off_client=0x7f020072;
@@ -1742,15 +1742,6 @@ containing a value of this type.
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -1763,9 +1754,6 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f050090;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f050091;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
