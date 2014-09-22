@@ -1641,7 +1641,7 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f070025;
         public static final int action_settings=0x7f070028;
         public static final int app_name=0x7f070027;
-        public static final int button_send=0x7f07002b;
+        public static final int button_send=0x7f07002a;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1731,10 +1731,9 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f070018;
-        public static final int edit_message=0x7f07002a;
-        public static final int hello_world=0x7f070029;
-        public static final int title_activity_display_message=0x7f07002d;
-        public static final int title_activity_main=0x7f07002c;
+        public static final int edit_message=0x7f070029;
+        public static final int title_activity_display_message=0x7f07002c;
+        public static final int title_activity_main=0x7f07002b;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
@@ -1742,15 +1741,6 @@ containing a value of this type.
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -1763,9 +1753,6 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f050090;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f050091;
         /**  Mimic text appearance in select_dialog_item.xml 
          */

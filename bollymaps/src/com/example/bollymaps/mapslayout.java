@@ -9,12 +9,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 
 
 
 public class mapslayout extends Activity {
 
-	private MovieDBAdapter dbAdapter;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -22,20 +22,18 @@ public class mapslayout extends Activity {
         setContentView(R.layout.activity_main);	
 	      
 		Bundle extras = getIntent().getExtras();		
-		String value = extras.getString("locationName");
-		
-	    dbAdapter = MainActivity.GetAdapterInstance();
-		String[] columns = new String[] {MovieDBAdapter.COL_ROWID, MovieDBAdapter.COL_LOCATION, MovieDBAdapter.COL_LATITUDE, MovieDBAdapter.COL_LONGITUDE};
-	    String where = "MovieLocation='" + value + "'";
-		Cursor c = dbAdapter.GetCursor(columns, where, null, null, null);
-		
-	    c.moveToFirst();
-	    double lat = c.getDouble(c.getColumnIndex(MovieDBAdapter.COL_LATITUDE));
-	    double lng = c.getDouble(c.getColumnIndex(MovieDBAdapter.COL_LONGITUDE));
-        
-        GoogleMap map = ((MapFragment) getFragmentManager()
+		String valueOfLat = extras.getString("lat");  // Get Lattitude
+		String valueOfLng = extras.getString("lng");  // Get Longitude
+
+		// Convert String to Double
+		double lat = Double.parseDouble(valueOfLat);
+		double lng = Double.parseDouble(valueOfLng);
+
+		// Create the map
+		GoogleMap map = ((MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map)).getMap();
 
+		// Dummy markers and names - ToDo
         LatLng srkInKHNH = new LatLng(lat, lng);
         map.setMyLocationEnabled(true);
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(srkInKHNH, 13));

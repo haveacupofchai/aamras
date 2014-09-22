@@ -2,12 +2,12 @@ package com.example.bollymaps;
 
 import android.os.Bundle;
 import android.app.Activity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -18,8 +18,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         dbAdapter = new MovieDBAdapter(this);
         dbAdapter.initializeDatabase("/data/data/com.example.bollymaps/databases/");
-        dbAdapter.open();
-
+        dbAdapter.open();     
     }
     
     public void sendMessage(View view) {
