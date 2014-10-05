@@ -7,5 +7,11 @@
     <string name="button_send">Movies by Name</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
+    <string name="button_byactor">Movies by Actor</string>
+    <string name="button_byactress">Movies by Actress</string>
+    <string name="button_bydirector">Movies by Director</string>
+    <string name="button_bylocation">Movies by Location</string>
+    <string name="button_closetome">Locations close to me</string>
+    <string name="button_byyear">Movies by Year</string>
      
 </resources>

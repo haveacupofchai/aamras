@@ -4,12 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/bMovieName"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
         android:onClick="sendMessage"
         android:text="@string/button_send" />
+    
+    <Button
+        android:id="@+id/bYear"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:onClick="byOther"
+        android:text="@string/button_byyear" />
+    
+    <Button
+    	android:id="@+id/bActorName"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:onClick="byOther"
+        android:text="@string/button_byactor" />
+
+    <Button
+    	android:id="@+id/bActressName"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:onClick="byOther"
+        android:text="@string/button_byactress" />
+    
+    <Button
+        android:id="@+id/bDirectorName"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:onClick="byOther"
+        android:text="@string/button_bydirector" />
+
+    <Button
+        android:id="@+id/bLocationName"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="@string/button_bylocation" />
+
+    <Button
+        android:id="@+id/bCloseToMe"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="@string/button_closetome" />
 
 </LinearLayout>

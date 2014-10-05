@@ -29,8 +29,19 @@ public class MovieNameList extends ListActivity{
 	 	
 	    dbAdapter = MainActivity.GetAdapterInstance();
 	      
+	    Bundle extras = getIntent().getExtras();
+	    String where, other;
+	    if(extras != null)
+	    {
+	    	where = extras.getString("otherName");
+	    	other = extras.getString("otherColumn");
+	    	where = other+ "=\'" + where + "\'";
+	    }
+	    else
+	    	where = null;
+	    
 	    String[] columns = new String[] {MovieDBAdapter.COL_ROWID, MovieDBAdapter.COL_LOCATION, MovieDBAdapter.COL_NAME};
-	    nameList = dbAdapter.GetArrayList(MovieDBAdapter.COL_NAME, columns, null, null, MovieDBAdapter.COL_NAME, null);
+	    nameList = dbAdapter.GetArrayList(MovieDBAdapter.COL_NAME, columns, where, null, MovieDBAdapter.COL_NAME, null);
 		 	
 		if(nameList.isEmpty() == false)	
 		{
