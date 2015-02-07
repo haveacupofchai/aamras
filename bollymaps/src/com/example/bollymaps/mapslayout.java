@@ -24,6 +24,8 @@ public class mapslayout extends Activity {
 		Bundle extras = getIntent().getExtras();		
 		String valueOfLat = extras.getString("lat");  // Get Lattitude
 		String valueOfLng = extras.getString("lng");  // Get Longitude
+		String valueOfMovie = extras.getString("movie"); // Get Movie name
+        String valueOfLocation = extras.getString("location"); // Get Location
 
 		// Convert String to Double
 		double lat = Double.parseDouble(valueOfLat);
@@ -34,13 +36,13 @@ public class mapslayout extends Activity {
                 .findFragmentById(R.id.map)).getMap();
 
 		// Dummy markers and names - ToDo
-        LatLng srkInKHNH = new LatLng(lat, lng);
+        LatLng thePosition = new LatLng(lat, lng);
         map.setMyLocationEnabled(true);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(srkInKHNH, 13));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(thePosition, 13));
 
         map.addMarker(new MarkerOptions()
-                .title("ACBD in Kal Ho Na Ho")
-                .snippet("Title Song was shot here")
-                .position(srkInKHNH));
+        		.title(valueOfMovie)
+        		.snippet(valueOfLocation)
+                .position(thePosition));
 	}
 }

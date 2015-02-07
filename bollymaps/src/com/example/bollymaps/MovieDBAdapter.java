@@ -18,7 +18,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MovieDBAdapter extends SQLiteOpenHelper {
 
 	private String DATABASE_PATH = "/data/data/com.example.bollymaps/databases/";
-	public static final String DATABASE_NAME = "movieDB.sqlite";
+	public static final String DATABASE_NAME = "movieDB";
 
 	private static SQLiteDatabase mDb;
 

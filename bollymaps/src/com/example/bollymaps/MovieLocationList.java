@@ -17,7 +17,7 @@ public class MovieLocationList extends ListActivity {
 
 	private ArrayList<String> locationList = new ArrayList<String>();
 	private MovieDBAdapter dbAdapter;
-	private String[] columns = new String[] {MovieDBAdapter.COL_ROWID, MovieDBAdapter.COL_LOCATION, MovieDBAdapter.COL_LATITUDE, MovieDBAdapter.COL_LONGITUDE};
+	private String[] columns = new String[] {MovieDBAdapter.COL_ROWID, MovieDBAdapter.COL_NAME, MovieDBAdapter.COL_LOCATION, MovieDBAdapter.COL_LATITUDE, MovieDBAdapter.COL_LONGITUDE};
 	private Cursor c;
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -33,10 +33,14 @@ public class MovieLocationList extends ListActivity {
 	    c.moveToFirst();
 	    String lat = c.getString(c.getColumnIndex(MovieDBAdapter.COL_LATITUDE));
 	    String lng = c.getString(c.getColumnIndex(MovieDBAdapter.COL_LONGITUDE));
+	    String movie = c.getString(c.getColumnIndex(MovieDBAdapter.COL_NAME));
+        String location = c.getString(c.getColumnIndex(MovieDBAdapter.COL_LOCATION));
 
 	    // Pass arguments to mapslayout class
 		intent.putExtra("lat", lat); // Lattitude
 		intent.putExtra("lng", lng); // Longitude
+		intent.putExtra("movie", movie); // Movie name
+        intent.putExtra("location", location); // Location
 		
 		// Starts the Maps Activity
         startActivity(intent);
